@@ -1,3 +1,55 @@
+import { routesConfig } from '~h07/config/routes';
+import { MdHome } from 'react-icons/md';
+import { BiSolidContact } from 'react-icons/bi';
+import { FaUser } from 'react-icons/fa';
+import { FiMessageCircle } from 'react-icons/fi';
+import { FaUsers } from 'react-icons/fa6';
+import './Footer.scss';
+import { IconType } from 'react-icons';
+import { NavLink } from 'react-router-dom';
+
+type _Item = {
+    id: number;
+    path: string;
+    icon: IconType;
+};
+
 export const Footer = () => {
-    return <footer className="footer">FOOTER</footer>;
+    const data: _Item[] = [
+        {
+            id: 1,
+            path: routesConfig.contacts,
+            icon: BiSolidContact,
+        },
+        {
+            id: 2,
+            path: routesConfig.friends,
+            icon: FaUsers,
+        },
+        {
+            id: 3,
+            path: routesConfig.home,
+            icon: MdHome,
+        },
+        {
+            id: 4,
+            path: routesConfig.messages,
+            icon: FiMessageCircle,
+        },
+        {
+            id: 5,
+            path: routesConfig.profile,
+            icon: FaUser,
+        },
+    ];
+
+    return (
+        <footer className="footer">
+            {data.map((item) => (
+                <NavLink to={item.path} className="footer-item">
+                    <span className="footer-item-icon">{<item.icon />}</span>
+                </NavLink>
+            ))}
+        </footer>
+    );
 };

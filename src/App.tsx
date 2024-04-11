@@ -1,13 +1,26 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Home } from '~h07/pages/Home/Home';
-import { Contacts } from '~h07/pages/Contacts/Contacts';
+import { routers } from '~h07/router';
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route element={<Home />} path="/" />
-                <Route element={<Contacts />} path="/contacts" />
+                {routers.map((item) => {
+                    const Layout = item.layout as any;
+                    const Page = item.component as any;
+
+                    return (
+                        <Route
+                            element={
+                                <Layout>
+                                    <Page />
+                                </Layout>
+                            }
+                            path={item.path}
+                            key={item.id}
+                        />
+                    );
+                })}
             </Routes>
         </BrowserRouter>
     );

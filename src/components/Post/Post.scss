@@ -1,0 +1,119 @@
+.post {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 12px;
+
+    .post-images {
+        display: flex;
+        height: 650px;
+        position: relative;
+        user-select: none;
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .back-image,
+        .next-image {
+            position: absolute;
+            top: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 1.6rem;
+            background-color: rgba(0, 0, 0, 0.45);
+            color: var(--white-color);
+        }
+        .next-image {
+            right: 8px;
+        }
+        .back-image {
+            left: 8px;
+        }
+    }
+
+    .post-description {
+        max-width: calc(100% - 16px);
+        font-weight: 300;
+        text-wrap: wrap;
+        word-spacing: 2px;
+        font-size: 1.4rem;
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .post-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .post-info-avatar {
+            display: flex;
+            align-items: center;
+
+            .avatar-image {
+                width: 38px;
+                height: 38px;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 999px;
+                    object-fit: cover;
+                }
+            }
+
+            .avatar-name {
+                padding-left: 16px;
+
+                .post-name-user {
+                    font-size: 1.6rem;
+                    color: var(--bold-color);
+                }
+
+                .post-date-time {
+                    font-size: 1.4rem;
+                    color: var(--text-color);
+                    opacity: 0.75;
+                }
+            }
+        }
+
+        .post-actions {
+            display: flex;
+            align-items: center;
+
+            .post-action-item {
+                display: flex;
+                align-items: center;
+
+                .post-item-quantity {
+                    font-size: 1.4rem;
+                    color: var(--text-color);
+                    opacity: 0.8;
+                    margin-right: 6px;
+                }
+
+                .post-item-icon {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.8rem;
+                    color: var(--text-color);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    + .post {
+        margin-top: 16px;
+    }
+}

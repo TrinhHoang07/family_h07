@@ -3,6 +3,6 @@ export const routesConfig = {
     contacts: '/contacts',
     login: '/login',
     profile: '/profile',
-    messages: '/messages',
+    addpost: '/addpost',
     friends: '/friends',
 };

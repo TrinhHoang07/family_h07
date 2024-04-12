@@ -1,11 +1,11 @@
 import { DefaultLayout } from '~h07/components/Layout/default/DefaultLayout';
 import { FlagmentLayout } from '~h07/components/Layout/flagment/FlagmentLayout';
 import { routesConfig } from '~h07/config/routes';
+import { Addpost } from '~h07/pages/Addpost/Addpost';
 import { Contacts } from '~h07/pages/Contacts/Contacts';
 import { Friends } from '~h07/pages/Friends/Friends';
 import { Home } from '~h07/pages/Home/Home';
 import { Login } from '~h07/pages/Login/Login';
-import { Messages } from '~h07/pages/Messages/Messages';
 import { Profile } from '~h07/pages/Profile/Profile';
 
 type _T_Router = {
@@ -48,8 +48,8 @@ export const routers: _T_Router[] = [
     },
     {
         id: 6,
-        path: routesConfig.messages,
-        component: Messages,
+        path: routesConfig.addpost,
+        component: Addpost,
         layout: DefaultLayout,
     },
 ];

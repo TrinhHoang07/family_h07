@@ -2,7 +2,7 @@ import { routesConfig } from '~h07/config/routes';
 import { MdHome } from 'react-icons/md';
 import { BiSolidContact } from 'react-icons/bi';
 import { FaUser } from 'react-icons/fa';
-import { FiMessageCircle } from 'react-icons/fi';
+import { IoMdAdd } from 'react-icons/io';
 import { FaUsers } from 'react-icons/fa6';
 import './Footer.scss';
 import { IconType } from 'react-icons';
@@ -33,8 +33,8 @@ export const Footer = () => {
         },
         {
             id: 4,
-            path: routesConfig.messages,
-            icon: FiMessageCircle,
+            path: routesConfig.addpost,
+            icon: IoMdAdd,
         },
         {
             id: 5,

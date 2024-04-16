@@ -46,7 +46,7 @@ export const Footer = () => {
     return (
         <footer className="footer">
             {data.map((item) => (
-                <NavLink to={item.path} className="footer-item">
+                <NavLink key={item.id} to={item.path} className="footer-item">
                     <span className="footer-item-icon">{<item.icon />}</span>
                 </NavLink>
             ))}

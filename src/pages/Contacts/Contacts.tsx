@@ -1,8 +1,17 @@
 import { FaPhoneSquare } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';
 import './Contacts.scss';
+import { useEffect } from 'react';
 
 export const Contacts = () => {
+    useEffect(() => {
+        document.title = 'Liên hệ! Family h07';
+        window.scrollTo({
+            behavior: 'smooth',
+            top: 0,
+        });
+    }, []);
+
     return (
         <div className="contacts">
             <h3 className="contacts-heading">Team h07_family</h3>

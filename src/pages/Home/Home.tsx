@@ -4,8 +4,17 @@ import { FaCaretDown } from 'react-icons/fa';
 import img_1 from '~h07/assets/images/img_1.jpg';
 import img_2 from '~h07/assets/images/img_2.jpg';
 import './Home.scss';
+import { useEffect } from 'react';
 
 export const Home = () => {
+    useEffect(() => {
+        document.title = 'Trang chủ! Family h07';
+        window.scrollTo({
+            behavior: 'smooth',
+            top: 0,
+        });
+    }, []);
+
     return (
         <div className="home">
             <div className="home-header">

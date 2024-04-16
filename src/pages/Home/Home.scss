@@ -1,6 +1,6 @@
 .home {
     .home-header {
-        background-color: #fff;
+        background-color: var(--white-color);
         padding: 6px;
 
         .header-account {
@@ -59,6 +59,6 @@
 
     .home-posts {
         padding: 8px;
-        background-color: #f2f3f5;
+        background-color: var(--bg-color);
     }
 }
